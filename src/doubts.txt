@@ -1,0 +1,5 @@
+in recursive reverse linked list - if we dont return
+newhead = reverseList(head?.next)
+if we remove newhead - still output is coming
+
+invert binary tree recursive - how creating new node will strike
