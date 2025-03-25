@@ -17,7 +17,6 @@ class BFSLevelOrder {
         val result = mutableListOf<MutableList<Int>>()
         val visitedNodes = ArrayDeque<TreeNode>()
         root?.let{visitedNodes.add(it)}
-        var currLevel = 1
         while(visitedNodes.isNotEmpty()){
             val currLevelNodeList = mutableListOf<TreeNode>()
             val currLevelIntList = mutableListOf<Int>()

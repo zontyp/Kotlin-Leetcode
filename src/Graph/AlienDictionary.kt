@@ -45,6 +45,7 @@ class AlienDictionary {
                 inDegree[dependency] = inDegree[dependency]!! - 1
                 if (inDegree[dependency] == 0) {
                     queue.add(dependency)
+               
                 }
             }
         }

@@ -19,6 +19,7 @@ class ValidateBST {
 fun isValidBSTPartial(root: TreeNode?, min: Int?, max: Int?): Boolean {
     if (root == null) {
         return true
+
     }
     if ((min != null && root.`val` <= min) || (max != null && root.`val` >= max)) {
         return false

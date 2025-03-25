@@ -1,6 +1,6 @@
 package Tree
 
-class ConstructTreeFromTraversal {
+class ConstructTreeFromTraversal_LC105 {
 
     fun buildTree(preorder: IntArray, inorder: IntArray): TreeNode? {
         val inorderMap = inorder.withIndex().associate { it.value to it.index }

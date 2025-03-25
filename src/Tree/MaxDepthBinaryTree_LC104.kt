@@ -1,6 +1,6 @@
 package Tree
 
-class MaxDepthBinaryTree {
+class MaxDepthBinaryTree_LC104 {
     fun maxDepth(root: TreeNode?): Int {
         var left = 0
         var right = 0
