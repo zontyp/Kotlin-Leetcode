@@ -3,3 +3,7 @@ newhead = reverseList(head?.next)
 if we remove newhead - still output is coming
 
 invert binary tree recursive - how creating new node will strike
+
+in word search 79 , why should we choose direction as up, down , left , right
+
+combinations_LC77_for dry run 

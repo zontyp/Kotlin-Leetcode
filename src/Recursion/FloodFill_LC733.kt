@@ -1,0 +1,57 @@
+/*
+Flood Fill Algorithm:
+- Given a 2D image grid, we start at (sr, sc).
+- Change the color of all connected cells with the same original color to 'color'.
+- we solve by dfs
+- if oldcolor == newcolor then we can go in infinite recursion as we do not check that inside dfs
+- so we check above in floodfill itself
+- We stop when we reach out-of-bounds or a cell with a different color.
+- No need for a 'visited' set since we directly modify the grid.
+*/
+
+fun floodFill(image: Array<IntArray>, sr: Int, sc: Int, color: Int): Array<IntArray> {
+    val oldColor = image[sr][sc]
+    //😈💀 below is important as else infinite recursion among cells with newcolor value
+    if (oldColor == color) return image
+
+    // No need to fill if already the target color
+
+
+    fun dfs(r: Int, c: Int) {
+        if (r !in image.indices || c !in image[0].indices || image[r][c] != oldColor) return // Base case: stop if out-of-bounds or different color
+
+        image[r][c] = color // Fill current cell
+        dfs(r - 1, c) // Up
+        dfs(r + 1, c) // Down
+        dfs(r, c - 1) // Left
+        dfs(r, c + 1) // Right
+    }
+
+    dfs(sr, sc) // Start DFS from given position
+    return image
+}
+
+fun main() {
+    val image = arrayOf(
+        intArrayOf(1, 1, 1),
+        intArrayOf(1, 1, 0),
+        intArrayOf(1, 0, 1)
+    )
+
+    val sr = 1   // Starting row index
+    val sc = 1   // Starting column index
+    val newColor = 2
+
+    println("Original Image:")
+    printImage(image)
+
+    val result = floodFill(image, sr, sc, newColor)
+
+    println("Image after Flood Fill:")
+    printImage(result)
+}
+
+// Helper function to print the image
+fun printImage(image: Array<IntArray>) {
+    image.forEach { println(it.joinToString(" ")) }
+}

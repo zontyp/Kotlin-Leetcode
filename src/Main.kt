@@ -1,27 +1,26 @@
-fun main() {
-    combinationSum(intArrayOf(1,4,2),3).let { println(it) }
-}
-fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
-    var index = 0
-    var n = candidates.size
-    val result = mutableListOf<List<Int>>()
-    val leafList = mutableListOf<Int>()
-//    candidates.sort()
-    fun dfs(index:Int,currentSum:Int){
-        if(index == n || currentSum > target)
-            return
-        if(currentSum == target){
-            result.add(leafList.toList())
-            return
-        }
+fun demonstrateConcurrentModificationProblem() {
+    // Problematic approach
+    fun problematicIteration() {
+        val numbers = mutableListOf(1, 2, 3, 4)
 
-        if(currentSum + candidates[index] > target)
-            return
-        leafList.add(candidates[index])
-        dfs(index,currentSum + candidates[index])
-        leafList.removeLast()
-        dfs(index+1,currentSum)
+        println("Problematic Iteration:")
+        val currentNumbers = numbers.toList()
+        for (num in currentNumbers) {
+            println("Current number: $num")
+
+            // Trying to modify list while iterating
+            numbers.add(num * 10)
+
+            // This will cause a ConcurrentModificationException
+            // or unexpected behavior
+        }
+        println(numbers)
     }
-    dfs(0,0)
-    return result
+    problematicIteration()
+}
+fun main() {
+    demonstrateConcurrentModificationProblem()
+    val a = "karan"
+    println(setOf(a))
+    println(a.toSet())
 }
