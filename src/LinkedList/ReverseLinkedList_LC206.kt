@@ -27,6 +27,7 @@ class ReverseLinkedList_LC206 {
     fun reverseList(head: ListNode?): ListNode? {
         var curr = head
         var prev: ListNode? = null
+        //single node case
         if(curr?.next == null)
             return curr
         while(curr != null) {

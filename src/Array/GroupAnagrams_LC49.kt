@@ -1,5 +1,10 @@
 package Array
+/*
+Given an array of strings strs, group the anagrams together.
+You can return the answer in any order.
+we make output hash with key as alphabet frequency array and value as list of the strings with same frequency array
 
+ */
 fun main() {
     println(GroupAnagrams.group(arrayOf("eat","tea","tan","ate","nat","bat")))
 }

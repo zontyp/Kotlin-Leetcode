@@ -1,5 +1,15 @@
 package Array
+/*
+LC 128
+https://leetcode.com/problems/longest-consecutive-sequence/description/
+Given an unsorted array of integers nums,
+ return the length of the longest consecutive elements sequence.
 
+You must write an algorithm that runs in O(n) time.
+
+
+
+ */
 fun main() {
     println(LongestConsecutiveSubsequence_LC128().longestConsecutive(intArrayOf(0,3,2,5,4,6,1,1)))
 }

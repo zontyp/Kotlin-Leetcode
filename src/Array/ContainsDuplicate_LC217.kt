@@ -9,6 +9,8 @@ so we use hashset for lookup as its o(1)
 if element is not present in hashset - we add it
 so that it can be looked up next time.
 
+how to implement without extra space
+sort the array and then check neighbouring elements nums[i] and nums[i-1]
  */
 class ContainsDuplicate_LC217 {
     companion object{
