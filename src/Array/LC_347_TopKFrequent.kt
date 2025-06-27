@@ -4,6 +4,9 @@ https://leetcode.com/problems/top-k-frequent-elements/submissions/1673866370/
 LC 347
 Given an integer array nums and an integer k,
 return the k most frequent elements. You may return the answer in any order.
+
+idea:
+
 make frequency map
 make a list with numbers of each frequency
 then add to result from end of list to beginning.
