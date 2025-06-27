@@ -1,4 +1,4 @@
-package Array
+package SlidingWindow
 /*
 LC 128
 https://leetcode.com/problems/longest-consecutive-sequence/description/
@@ -6,7 +6,11 @@ Given an unsorted array of integers nums,
  return the length of the longest consecutive elements sequence.
 
 You must write an algorithm that runs in O(n) time.
-
+idea:
+we need to find start of sequence - if(!lookup.contains(n-1)){
+and then check if next element is present
+we need to avoid duplicates - so we use a set.
+at each element - calculate current length and maxLength
 
 
  */
