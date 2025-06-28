@@ -1,11 +1,13 @@
 package LinkedList
+/*
+LC 206
+https://leetcode.com/problems/reverse-linked-list/description/
+Given the head of a singly linked list, reverse the list,
+and return the reversed list.
 
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
-    override fun toString(): String {
-        return "ListNode(`val`=$`val`, next=$next)"
-    }
-}
+
+ */
+
 
 fun main() {
     val one = ListNode(1)
@@ -23,16 +25,18 @@ fun main() {
 
 }
 class ReverseLinkedList_LC206 {
-    var temp :ListNode? = null
     fun reverseList(head: ListNode?): ListNode? {
+        if (head == null) return null
         var curr = head
         var prev: ListNode? = null
         //single node case
-        if(curr?.next == null)
-            return curr
+
         while(curr != null) {
+            //cache the next of curr
             var temp = curr?.next
+            //reverse the pointer of curr
             curr.next = prev
+            //move ahead to reverse the following pointer
             prev = curr
             curr = temp
         }
