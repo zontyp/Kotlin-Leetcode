@@ -1,5 +1,18 @@
 package BinarySearch
+/*
+LC153
+you can rotate in 3 ways:
+at the midpoint
+from right of midpoint
+from left of midpoint
 
+after rotating in all 3 ways
+check nums[low] and nums[mid]
+if nums[low] is less or equal - left part is sorted
+else right part is sorted
+take the minimum from the sorted part and then ignore the sorted part
+we just need minimum from sorted part in the current iteration
+ */
 fun main() {
     MinRotatedSortedArr_LC153().findMin(intArrayOf(3,4,5,2)).let { println(it) }
 }

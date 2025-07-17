@@ -1,4 +1,15 @@
 package Intervals
+/*
+LC 252
+overlapping means end of one interval should not be greater or equal to start of other interval.
+so we need to check every pair with each other
+
+but if we sort by start times - we need to check only each group of 2 intervals
+a,b,c => sorted intervals
+if a does not overlap with b
+its guaranteed that a will not overlap with c
+
+ */
  class Interval {
          var start: Int = 0
          var end: Int = 0

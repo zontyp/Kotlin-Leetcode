@@ -1,6 +1,22 @@
 package Intervals
+/*
 
-import java.util.TreeMap
+LC 253
+ in meeting rooms - we just need to check if overlap is there or no
+ in meeting room 2 - we need to count the number of overlaps
+ overlaps may not be consecutive
+ 0,30
+ 5,10
+ 12,15
+
+ 12,15 is overlapping with 0,30 although they are not consecutive
+ so if we just check consecutive - we miss out on that info
+ so we store start time , end time as keys in a map , we sort the map
+ and then add every value - the max value after adding any value is the result
+
+ if we get start time - we add a room , if we get end time - we decrease a room . so we add start time, end time as keys in a map and sort the map .
+for start time we add 1 to the value of the map
+ */
 //class Interval(var start: Int, var end: Int) {}
 fun main() {
     val one = Interval(1,5)

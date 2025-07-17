@@ -1,5 +1,19 @@
 package BinarySearch
+/*LC 81
+https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/
+idea:
+the only problem case with duplicates is
+nums[low] == nums[mid] == nums[high]
+so just trim / ignore this case
+and try to come to a case where we can detect the sorted part is either left or right part
 
+how to think if why this problem case could occur
+imagine 1,2 and a long list of 3's
+and rotation takes place after the first 3
+3,3,3....,1,2,3
+now nums[low] == nums[mid] == nums[high]
+
+ */
 fun main() {
     SearchRotatedSortedDuplicate_LC81().search(intArrayOf(1,0,1,1,1),0).let{ println(it) }
 }

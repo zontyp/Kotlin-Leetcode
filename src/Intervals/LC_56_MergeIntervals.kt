@@ -1,6 +1,21 @@
 package Intervals
 import java.lang.Integer.max
+/*
+LC 56
+if we check one interval with all others then we are done
+why we do not need to do that ?
+if we sort by start time , then its guaranteed that for a,b,c
+if b , a not overlapping then c,a will also not overlap
 
+Two intervals [a, b] and [c, d] overlap if:
+c ≤ b
+to merge :
+
+[start = a, end = max(b, d)]
+
+just check current and prev
+
+ */
 fun main() {
     val intervals = arrayOf(intArrayOf(1,4), intArrayOf(4,5))
     MergeIntervals().merge(intervals).forEach { it.forEach { println(it) } }

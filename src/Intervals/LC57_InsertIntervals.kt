@@ -1,6 +1,18 @@
 package Intervals
+/*
+LC 57
+3 cases :
+current interval is less than , greater than or overlapping with newInterval
 
-class InsertIntervals {
+if its overlapping - change newinterval by taking min of start of curr, newInterval , max of end
+if overlapping case occurs - we change the newInterval itself to be the new expanded one.
+
+how to add array to list
+(result + intervals.sliceArray(intervals.indexOf(curr) until intervals.size)).toTypedArray()
+
+
+ */
+class LC57_InsertIntervals {
     fun insert(intervals: Array<IntArray>, newInterval: IntArray): Array<IntArray> {
         val result = mutableListOf<IntArray>()
         for(curr in intervals){
