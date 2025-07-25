@@ -9,7 +9,11 @@ solution
 take and add to current sum
 not take and dont add to current sum
 same as subsequences
-better to sort input array as we prune the tree - eliminate hiher sums quickly
+better to sort input array as we prune the tree - eliminate higher sums quickly
+
+//doubt - why to sort array ?
+why we need
+currentSum > target and currentSum + candidates[index] > target
  */
 fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
     val leafList = mutableListOf<Int>()
@@ -24,7 +28,7 @@ fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
         //previous current sum was smaller and adding current makes it larger then no point in proceeding
         //IF WE DONT TAKE CURRENT ELEMENT - no point in taking any subsequent element as well 
         //current sum has become greater - no point in proceeding
-        if(currentSum > target || index == inputSize || currentSum + candidates[index] > target)
+        if(index == inputSize || currentSum + candidates[index] > target)
             return
 
         leafList.add(candidates[index])

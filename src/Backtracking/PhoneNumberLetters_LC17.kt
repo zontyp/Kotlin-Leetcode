@@ -22,6 +22,9 @@ when dfs 1 returns for i = 1
 then we move to dfs 1 for i = 2
 and then we return to dfs 0 for i = 0 , 1, 2
 
+we find all possible subsets .
+at each position - we take / not take each character
+
  */
 fun letterCombinations(digits: String): List<String> {
     if(digits == "")

@@ -15,6 +15,7 @@ fun combine(n: Int, k: Int): List<List<Int>> {
     fun dfs(currentNum: Int, k: Int) {
         // Base case: If we have selected k numbers, add the combination to result
         if (k == 0) {
+            println(leafList)
             result.add(leafList.toList()) // Store a copy of leafList
             return
         }
@@ -36,7 +37,7 @@ fun combine(n: Int, k: Int): List<List<Int>> {
 }
 
 fun main() {
-    val n = 4  // Range from 1 to n
+    val n = 2  // Range from 1 to n
     val k = 2  // Select k elements
     val result = combine(n, k)
     println("Combinations of $k numbers from 1 to $n:")

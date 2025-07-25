@@ -1,7 +1,51 @@
 package Graph
+
 //make adjacency list of dependencies
 //make in degree
 //do topological sort
+//
+//
+/*
+https://www.lintcode.com/problem/892/
+There is a new alien language which uses the latin alphabet.
+ However, the order among letters are unknown to you.
+ You receive a list of non-empty words from the dictionary,
+ where words are sorted lexicographically by the rules of this new language.
+ Derive the order of letters in this language.
+
+
+dependency[t] = f
+f depends on t
+first t will be added , then f will be added
+dep[e] = r
+dep[r] = t
+w -> e
+
+--------------- Big Idea --------------------------
+
+there are two steps in this problem :
+a) find the dependencies of the characters
+b) add the character to the result when all its parents are added to the result already
+
+a) to find dependencies :
+the words are sorted in lexicographical order
+the first differing character between adjacent words is the reason for the ordering of words
+
+so the first differing character between adjacent words will give us a dependency
+
+once we have the dependencies - we move to step 2
+
+b) to add character to result :
+add all chars with indegree 0 to queue
+now add one character with indgree 0 to result - resulted char
+now reduce indegree of all chars which depend on/ are child of  resulted char by 1
+add chars with indegree 0 to queue
+
+add next char from queue to result ... and so on
+
+
+ */
+
 fun main() {
     val words = arrayOf("wrt","wrf","er","ett","rftt")
     println(AlienDictionary().alienOrder(words))

@@ -36,6 +36,12 @@ how much you gained from 26th to 30th = 200
 
 suppose your balance on 20th was also 800
 how much you gained from 21st to 30th = 200
+
+how do we implement :
+at each element - we find the prefix sum .
+we store this prefix sum in a map for future use
+at each element - we check if current prefix sum - k is present in the map and how many times
+this count is the num of sub arrays at that element - so add it to the final result
  */
 class LC560_SubarraySumEqualK {
     fun subarraySum(nums: IntArray, k: Int): Int {

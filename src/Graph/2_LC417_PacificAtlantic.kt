@@ -1,5 +1,20 @@
 package Graph
+/*
+LC 417
+if we check any cell and try to see if water flows to pac or atl from
+that cell
+we have to check if we reached top,left,bottom or right cell
+we have to mark each cell whether it can reach the ocean or no
 
+instead if we start from ocean - then we dont need to mark the cell for success of failure
+to both oceans
+we just add the cell to visited hashset if its was visited so we traverse all cells only once
+to add to visited hashset
+
+//doubt / todo - how many times will dfs be called
+
+
+ */
 fun main() {
     val a = arrayOf(
         intArrayOf(1,2,2,3,5),
@@ -32,12 +47,12 @@ class PacificAtlantic {
             dfs(r, c - 1, visit, heights[r][c])
         }
         for(i in 0 until totalRows){
-            dfs(i,0,pac,Int.MIN_VALUE)
-            dfs(i,totalCols - 1,atl,Int.MIN_VALUE)
+            dfs(i,0,pac,Int.MIN_VALUE)//left
+            dfs(i,totalCols - 1,atl,Int.MIN_VALUE)//right
         }
         for(i in 0 until totalCols){
-            dfs(0,i,pac,Int.MIN_VALUE)
-            dfs(totalRows - 1,i,atl,Int.MIN_VALUE)
+            dfs(0,i,pac,Int.MIN_VALUE)//top
+            dfs(totalRows - 1,i,atl,Int.MIN_VALUE)//bottom
         }
         println(pac)
         println(atl)

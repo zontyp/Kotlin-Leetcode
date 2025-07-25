@@ -6,6 +6,22 @@ then we move to the next pos
 and do the same thing - take the element or not take the element .
 to take the element we add it to the leaflist .
 to not take - we remove from the leafList
+
+ // Not take
+    dfs(pos + 1, k)  ---> this can be done with a for as its just moving to the next element
+
+    // Take
+    leafList.add(pos)
+    dfs(pos + 1, k - 1)
+    leafList.removeLast()
+
+     above is same as :
+
+    for (i in pos..n) {
+    leafList.add(i)           // take i
+    dfs(i + 1, k - 1)         // recurse with reduced k
+    leafList.removeLast()     // backtrack
+}
  */
 fun main() {
     val obj = Combinations_LC77_For()

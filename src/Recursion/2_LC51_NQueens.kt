@@ -1,5 +1,27 @@
 package Recursion
+/*LC51
+we place queen on each column of a row and check if we can find
+required position
+we place on first row and check , then on next row and so on
+we come to know only by placing the queen , checking and backtracking
 
+dfs / solve checks for each row
+and fow loop checks for each column
+
+🧠 Big Picture First
+The idea is to:
+
+Try placing a queen row by row, one in each row.
+
+For every position in the current row, check if placing a queen there is safe.
+
+If yes, place it and go to the next row.
+
+If not,backtrack and  try the next column.
+
+When you reach currRow == totalRowCol,
+ it means you’ve successfully placed N queens → record the board state as a solution.
+ */
 fun main() {
     val totalRowCol = 5
     val board = Array(totalRowCol){CharArray(totalRowCol){'.'} }
@@ -9,6 +31,7 @@ class NQueens {
     var result:MutableList<String> = mutableListOf()
     var totalRowCol = 5
     fun isSafe(board:Array<CharArray>,currRow: Int,currCol:Int):Boolean{
+      //check column safety
         for (i in 0 until currRow){
             if(board[i][currCol] == 'Q')
                 return false
@@ -45,6 +68,7 @@ class NQueens {
             if(isSafe(board,currRow,currCol)){
             board[currRow][currCol] = 'Q'
             solve(currRow +1,board)
+                //After recursive call, backtrack (remove queen) to explore other options.
             board[currRow][currCol] = '.'
         }
     }

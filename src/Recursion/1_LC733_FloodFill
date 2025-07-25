@@ -7,8 +7,22 @@ Flood Fill Algorithm:
 - so we check above in floodfill itself
 - We stop when we reach out-of-bounds or a cell with a different color.
 - No need for a 'visited' set since we directly modify the grid.
-*/
 
+why infinite recursion can happen if we do
+not check that oldColor == newColor:
+
+one of the boundary conditions is image[r][c] != oldColor
+we change the oldcolor to newcolor
+but if oldcolor == newcolor
+then
+image[r][c] != oldColor will never be true even after we change it
+so we need to check if (oldColor == color) return image
+before the boundary condition check.
+*/
+/*
+LC 733
+
+ */
 fun floodFill(image: Array<IntArray>, sr: Int, sc: Int, color: Int): Array<IntArray> {
     val oldColor = image[sr][sc]
     //😈💀 below is important as else infinite recursion among cells with newcolor value

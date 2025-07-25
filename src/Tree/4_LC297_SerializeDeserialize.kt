@@ -1,7 +1,13 @@
 package Tree
-
 import java.util.*
+/*
+LC 297
+https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
+do preorder dfs for serialize and deserialize
+in deserialize - pull node from linked list
 
+
+ */
 class SerializeDeserialize {
     fun serialize(root: TreeNode?): String {
         val result = mutableListOf<String>()

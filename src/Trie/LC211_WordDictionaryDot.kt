@@ -1,5 +1,17 @@
 package Trie
+/*
+LC 211
+https://leetcode.com/problems/design-add-and-search-words-data-structure/description/
+same as trie basic
+if there is dot - we just go to all possible children and check if any one possibility is true
+we call dfs with each non null child
+we pass startInd which is current index of word to dfs
+if dot is there - just increment the word index
 
+we pass root to dfs as we want to initialize current with root
+we pass the word to search and we pass the current wordIndex
+
+ */
 fun main() {
     val myDictionary = WordDictionaryDot()
     myDictionary.addWord("karan")
