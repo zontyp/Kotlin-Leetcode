@@ -2,6 +2,12 @@ package Intervals
 import java.lang.Integer.max
 /*
 LC 56
+https://leetcode.com/problems/merge-intervals/description/
+Given an array of intervals where intervals[i] = [starti, endi],
+merge all overlapping intervals, and return an array of the
+non-overlapping intervals that cover all the intervals in the input.
+
+solution :
 if we check one interval with all others then we are done
 why we do not need to do that ?
 if we sort by start time , then its guaranteed that for a,b,c

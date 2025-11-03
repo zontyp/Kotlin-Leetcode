@@ -2,7 +2,8 @@ package Array.TwoPointer.ReadWrite
 /*
 
 when we swap with r -
-we need to recheck that element is a 1 or a 0? so we cannot increment m after swapping with r
+we need to recheck that element is a 1 or a 0?
+so we cannot increment m after swapping with r
  */
     fun swapElement(a:Int,b:Int,nums:IntArray){
         var temp = nums[a]

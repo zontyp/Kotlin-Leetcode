@@ -1,5 +1,4 @@
 package test.Array
-import Array.ContainsDuplicate
 import org.junit.jupiter.api.Test
 import org.jetbrains.annotations.TestOnly
 

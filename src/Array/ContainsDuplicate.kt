@@ -1,5 +1,0 @@
-package Array
-
-class ContainsDuplicate {
-
-}

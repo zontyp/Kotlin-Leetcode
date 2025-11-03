@@ -4,7 +4,8 @@ package SlidingWindow
 https://leetcode.com/problems/minimum-window-substring/
 
 🎯 Problem:
-Given two strings s and t, return the minimum window in s that contains all the characters in t (including duplicates).
+Given two strings s and t, return the minimum window in s
+that contains all the characters in t (including duplicates).
 If there is no such window, return an empty string "".
 
 🧠 Algorithm:
@@ -15,19 +16,23 @@ if valid:
 repeat
 
 💡 Idea:
-This is a classic **sliding window** problem where we expand the window to include all characters in `t`,
+This is a classic **sliding window** problem where we expand the window
+to include all characters in `t`,
 then try to **shrink** it as much as possible while still keeping it valid.
 
 👣 Real-World Analogies:
 
 🧳 Messy Room Analogy:
-- You're packing your bag (window in `s`) and need 3 things (characters in `t`) like 🪪passport, 🔋charger, 🪥toothbrush.
+- You're packing your bag (window in `s`) and need 3 things (characters in `t`)
+like 🪪passport, 🔋charger, 🪥toothbrush.
 - Once your bag has everything ✅, you try to lighten it up (shrink the window).
 - Whenever you reach a lighter valid bag, save it! That's your best answer so far.
 
 🛒 Grocery Aisle Analogy:
-- You're walking through aisles (string `s`) to pick up items on your list (string `t`: 🥛, 🍞, 🥚).
-- You go forward until you have everything, then walk back from the start to skip unnecessary aisles.
+- You're walking through aisles (string `s`) to pick up
+ items on your list (string `t`: 🥛, 🍞, 🥚).
+- You go forward until you have everything,
+then walk back from the start to skip unnecessary aisles.
 - Save the shortest aisle span that satisfies your list.
 
 📐 Sliding Window Pattern:

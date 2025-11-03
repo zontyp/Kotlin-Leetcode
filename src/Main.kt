@@ -19,8 +19,10 @@ fun demonstrateConcurrentModificationProblem() {
     problematicIteration()
 }
 fun main() {
-    demonstrateConcurrentModificationProblem()
-    val a = "karan"
-    println(setOf(a))
-    println(a.toSet())
+//    demonstrateConcurrentModificationProblem()
+//    val a = "karan"
+//    println(setOf(a))
+//    println(a.toSet())
+    for(i in 1 until 10)
+        println(i)
 }

@@ -6,7 +6,8 @@ Given the head of a linked list, reverse the nodes of the list k at a time,
 and return the modified list.
 
 k is a positive integer and is less than or equal to the length of the linked list.
-If the number of nodes is not a multiple of k then left-out nodes, in the end, should remain as it is.
+If the number of nodes is not a multiple of k then left-out nodes, in the end,
+should remain as it is.
 
 You may not alter the values in the list's nodes,
 only nodes themselves may be changed.
@@ -45,11 +46,15 @@ class LC25_ReverseNodesKGroup {
             val kthNode = getKthNode(groupPrev.next,k)
             if(kthNode == null)
                 break
-            val groupNext = kthNode.next
-            var prev = groupNext // first node of current group will be connected to group next
+            //connect first node of new group to next of k
+            //first node of new group is curr which will be
+            //assigned to next of k (prev initial value)
+            var prev = kthNode.next
+
+             // first node of current group will be connected to group next
             var current = groupPrev.next
-            val reversedTail = groupPrev.next //tail of reverssed is cached
-            while(current != groupNext) {
+
+            while(current != kthNode.next ) {
                 var temp = current?.next
                 current?.next = prev
                 prev = current
@@ -59,7 +64,7 @@ class LC25_ReverseNodesKGroup {
             //current is at groupNext
             //prev = kth
             //now just connecct head , tail of reversed to groupPrev
-
+            val reversedTail = groupPrev.next //tail of reverssed is cached
             groupPrev.next  = kthNode //connect reversed Head to dummy / groupPrev
             groupPrev = reversedTail!!
         }

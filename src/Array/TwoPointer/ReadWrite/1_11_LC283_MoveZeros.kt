@@ -2,9 +2,29 @@ package Array.TwoPointer.ReadWrite
 
 /*
 https://leetcode.com/problems/move-zeroes/description/
-Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+Given an integer array nums, move all 0's to the end of it
+while maintaining the relative order of the non-zero elements.
 Note that you must do this in-place without making a copy of the array.
 related problems => 26,27
+
+solution :
+
+read , write two pointer
+
+r ptr will read
+l ptr will write
+
+l ptr will be trapped / paused at 0 values
+
+when current value is 0 {
+increment r
+dont increment l
+}
+when current value is not 0 {
+incr r , incr l
+if l != r
+swap l , r
+}
  */
 
 fun moveZeroes(nums: IntArray): Unit {

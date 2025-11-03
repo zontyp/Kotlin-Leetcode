@@ -14,7 +14,7 @@ we sort start time as we want to simulate time moving forward,
 just like a real schedule
  */
 import java.util.PriorityQueue
-class LC_253_MeetRoom2_MinHeap {
+class `2_28_LC_253_MeetRoom2_MinHeap` {
 
 
     fun minMeetingRooms(intervals: Array<IntArray>): Int {

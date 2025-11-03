@@ -19,9 +19,9 @@ connect
 reversedTail (start of the reversed range)
 to
 current: where to reconnect the tail
-
+9
  */
-class LC92_ReverseLinkedListPartly {
+class `2_43_LC92_ReverseLinkedListPartly` {
     fun reverseBetween(head: ListNode?, left: Int, right: Int): ListNode? {
         if(head == null || left == right)
             return head
@@ -43,7 +43,7 @@ class LC92_ReverseLinkedListPartly {
             reversedHead = current!!
             current = temp
         }
-        //connect reversed Head
+        //connect reversed Head7
         beforePart.next = reversedHead
         //connect reversedTail
         reversedTail?.next = current

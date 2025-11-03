@@ -4,7 +4,8 @@ LC 290
 https://leetcode.com/problems/word-pattern/
 Given a pattern and a string s, find if s follows the same pattern.
 
-Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s. Specifically:
+Here follow means a full match, such that there is a bijection
+between a letter in pattern and a non-empty word in s. Specifically:
 
 Each letter in pattern maps to exactly one unique word in s.
 Each unique word in s maps to exactly one letter in pattern.
@@ -13,9 +14,10 @@ No two letters map to the same word, and no two words map to the same letter.
 idea:
 check if current alphabet is mapped or no
 if its mapped - check the mapping
-if alphabet is  not mapped - check if the word is already used - as we need one to one mapping
+if alphabet is  not mapped - check if the word is already used -
+ as we need one to one mapping
  */
-class LC290_WordPatternMapSet {
+class `1_23_LC290_WordPatternMapSet` {
     fun wordPattern(pattern: String, s: String): Boolean {
         val stringWordList = s.split(" ") // split string into words
         val charWordMap = mutableMapOf<Char,String>() // stores char-to-word mapping

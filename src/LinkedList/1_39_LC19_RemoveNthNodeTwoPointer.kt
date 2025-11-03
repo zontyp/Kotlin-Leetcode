@@ -4,14 +4,17 @@ package LinkedList
 LC19
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
 Given the head of a linked list,
-remove the nth node from the end of the list
+remove the nth node from the end of the list.
 and return its head.
 
 idea:
 two pointers
-first pointer need to travel total of n + 1 + x nodes to reach null
-second pointer needs to travel x nodes to be able to remove the nth node
-if second pointer will travel x nodes - it will reach one before the nth node to remove it
+first pointer need to travel total of n + 1 + x
+nodes to reach null
+second pointer needs to travel x nodes
+ to be able to remove the nth node by being 1 before nth node
+if second pointer will travel x nodes -
+it will reach one before the nth node to remove it
 so we make first pointer travel n + 1 nodes
 then we start second pointer
 when first pointer reaches null

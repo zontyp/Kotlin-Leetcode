@@ -1,6 +1,7 @@
 package LinkedList
 
 /*
+https://leetcode.com/problems/add-two-numbers/description/
 You are given two non-empty linked lists representing two non-negative integers.
 The digits are stored in reverse order, and each of their nodes contains a single digit.
 Add the two numbers and return the sum as a linked list.
@@ -24,7 +25,7 @@ class LC2_AddTwoNumbers {
             carry = sum / 10               // Update carry
             sum = sum % 10                 // Value for the current node
             current.next = ListNode(sum)   // Create new node and attach
-            current = current.next!!       // Move current pointer
+            current = current.next!!       // Move current pointer as current was on 0
 
             l1 = l1?.next
             l2 = l2?.next

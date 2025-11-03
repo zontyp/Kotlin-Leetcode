@@ -1,4 +1,4 @@
-package SlidingWindow
+package HashMapSet
 /*
 LC 128
 https://leetcode.com/problems/longest-consecutive-sequence/description/

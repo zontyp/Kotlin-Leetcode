@@ -16,7 +16,7 @@ for current head - we just need to form new correct link :
  */
 class LC206_ReverseLinkedListRecursive {
     fun reverseList(head: ListNode?): ListNode? {
-        if (head == null || head.next == null)
+        if (head?.next == null)
         // return the last node
             return head
 

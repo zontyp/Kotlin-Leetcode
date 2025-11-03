@@ -2,14 +2,16 @@ package LinkedList
 /*
 LC 23
 https://leetcode.com/problems/merge-k-sorted-lists/
-You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+You are given an array of k linked-lists lists,
+ each linked-list is sorted in ascending order.
 Merge all the linked-lists into one sorted linked-list and return it.
 
 idea:
 we need to add minimum node to result list
 priority queue gives us the minimum node.
 
-once we add a node to priority queue - we need to add that nodes next to priority queue as well
+once we add a node to priority queue - we need to add that nodes
+next to priority queue as well
 
  */
 import java.util.PriorityQueue

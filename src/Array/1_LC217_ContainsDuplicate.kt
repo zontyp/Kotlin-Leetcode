@@ -12,7 +12,7 @@ so that it can be looked up next time.
 how to implement without extra space
 sort the array and then check neighbouring elements nums[i] and nums[i-1]
  */
-class ContainsDuplicate_LC217 {
+class `1_LC217_ContainsDuplicate` {
     companion object{
         fun hasDuplicate(nums:IntArray):Boolean{
             val myHashset = hashSetOf<Int>()

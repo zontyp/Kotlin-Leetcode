@@ -22,7 +22,7 @@ when we cover last column r --
 we also check if t > b and l > r to stop traversing further
 
  */
-class LC54_SpiralMatrix {
+class `2_20_LC54_SpiralMatrix` {
     fun spiralOrder(matrix: Array<IntArray>): List<Int> {
         var top = 0
         var bottom = matrix.size - 1

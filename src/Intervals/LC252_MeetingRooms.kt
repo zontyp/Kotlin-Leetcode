@@ -1,7 +1,10 @@
 package Intervals
 /*
 LC 252
-overlapping means end of one interval should not be greater or equal to start of other interval.
+https://neetcode.io/problems/meeting-schedule
+
+overlapping means end of one interval should not be greater or
+equal to start of other interval.
 so we need to check every pair with each other
 
 but if we sort by start times - we need to check only each group of 2 intervals

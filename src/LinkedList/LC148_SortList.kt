@@ -1,6 +1,9 @@
 package LinkedList
 /*
 LC 148
+https://leetcode.com/problems/sort-list/description/
+Given the head of a linked list, return the list after
+sorting it in ascending order.
 idea:
 find mid of list
 split list into two halves - left , right

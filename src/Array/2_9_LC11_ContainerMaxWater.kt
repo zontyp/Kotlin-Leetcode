@@ -10,6 +10,11 @@ suppose both containers are of same height
 if we move either - still height of existing will be the bottleneck
 
 so if both containers have same height - move both pointers
+.
+we are on l , r
+smaller between l , r is t-small .
+for successive attempt to succeed we need smaller between l,r to be higher than t-small.
+so we just ignore t-small of current attempt.
  */
 fun main() {
     println(ContainerMaxWater_LC11().maxArea(intArrayOf(1,1)))
