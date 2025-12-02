@@ -15,11 +15,8 @@ Given n nodes labeled from 0 to n - 1 and a list of undirected edges
   then the tree has a cycle.
 
   if edges > n - 1 then also there is a cycle
-
-
-
  */
-class `1_Lint178_GraphValidTree` {
+class `1_69_Lint178_GraphValidTree` {
     fun validTree(n: Int, edges: Array<IntArray>): Boolean {
        if (edges.size > n - 1)
         return false

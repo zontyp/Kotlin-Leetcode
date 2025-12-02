@@ -3,13 +3,17 @@ import kotlin.math.max
 /*
 Lc124
 https://leetcode.com/problems/binary-tree-maximum-path-sum/description/
-A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. Note that the path does not need to pass through the root.
+A path in a binary tree is a sequence of nodes where each pair
+of adjacent nodes in the sequence has an edge connecting them.
+A node can only appear in the sequence at most once.
+ Note that the path does not need to pass through the root.
 
 The path sum of a path is the sum of the node's values in the path.
 
 Given the root of a binary tree, return the maximum path sum of any non-empty path.
 
-big idea :
+Big Idea :
+------------------------------------------------------
 
 find max path sum at each node
 return max of max path sums of each node
@@ -39,9 +43,12 @@ class BinaryTreeMaxSum {
         dfs(root)
         return globalMax
     }
+
+
     fun dfs(node:TreeNode?):Int{
         if(node == null)
             return 0
+        //if leftMax or rightMax < 0 then ignore them
         val leftMax = max(0,dfs(node.left))
         val rightMax = max(0,dfs(node.right))
         //local max - as this current node could be the the one with max path

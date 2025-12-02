@@ -37,11 +37,11 @@ class LC148_SortList {
         while(left != null && right != null){
             if(left.`val` < right.`val`) {
                 current.next = left
-                left = left?.next
+                left = left.next
             }
                 else {
                     current.next = right
-                    right = right?.next
+                    right = right.next
             }
 
             current = current.next!!

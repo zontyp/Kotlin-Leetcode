@@ -1,5 +1,6 @@
 /*
-this can be done like LC 79 , word search but it is inefficient to check entire board for each word from .
+this can be done like LC 79 , word search but it
+is inefficient to check entire board for each word from .
 the list of words
 so we use trie along with backtracking to make word search happen in o(1)
 for each cell of the board we check the entire trie (means all words)

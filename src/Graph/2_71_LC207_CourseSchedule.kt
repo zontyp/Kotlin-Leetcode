@@ -2,7 +2,8 @@ package Graph
 /*
 LC 207
 https://leetcode.com/problems/course-schedule/description/
-There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1.
+There are a total of numCourses courses you have to take,
+labeled from 0 to numCourses - 1.
 You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates
 that you must take course bi first if you want to take course ai.
 
@@ -26,11 +27,13 @@ to see if there is a cycle
 we need to check for cycle for each course
 
 after checking for one course - we clear the visited , premap for that course
-we clear visited as course 2 can have prereqs same as course 1 and stoll not have a cycle
+we clear visited as course 2 can have prereqs same as
+ course 1 and stoll not have a cycle
 
-we clear premap as once a course is clean / free of cycles  - no need to check it again and again
+we clear premap as once a course is clean / free of cycles
+- no need to check it again and again
  */
-class `3_LC207_CourseSchedule` {
+class `2_71_LC207_CourseSchedule` {
     fun canFinish(numCourses: Int, prerequisites: Array<IntArray>): Boolean {
         val preMap = hashMapOf<Int,MutableList<Int>>()
         for(i in 0 until numCourses){

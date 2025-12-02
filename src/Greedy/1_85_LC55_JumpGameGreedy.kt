@@ -1,7 +1,7 @@
 package Greedy
 /*
 LC 55
-https://leetcode.com/problems/jump-game/description/?utm_source=chatgpt.com
+https://leetcode.com/problems/jump-game/description
 if all elements are 1 - then we will always reach the end by making a jump of 1
 
 so we just need to lookout for zeroes and if we get stuck at them

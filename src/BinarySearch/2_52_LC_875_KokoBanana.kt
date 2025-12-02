@@ -1,5 +1,5 @@
 package BinarySearch
-import kotlin.math.ceil
+
 /*
 idea:
 we need to find number of bananas that can be eaten in one hour
@@ -8,7 +8,7 @@ lowest speed = l = 1
 highest speed = r = piles.max
 m = l + (r-l)/2
 calculate hours required for eating m bananas
-th = sum((p.long + m - 1)/m)
+    th = sum((p.long + m - 1)/m)
 if th > h speed is slow - increase speed
 if th < h  speed is fast - decrease speed
 

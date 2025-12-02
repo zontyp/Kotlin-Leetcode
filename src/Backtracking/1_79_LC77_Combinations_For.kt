@@ -47,7 +47,6 @@ class Combinations_LC77_For {
                 leafList.removeLast()
 
             }
-
         }
         dfs(1,k)
         return result

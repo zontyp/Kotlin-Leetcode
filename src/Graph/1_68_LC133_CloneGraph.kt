@@ -37,35 +37,38 @@ add 2 , 4
 after adding 2
 add 3 (by cloning), add 4 (not by cloning but by reading from map)
  */
- class Node(var `val`: Int) {
-     var neighbors: ArrayList<Node?> = ArrayList<Node?>()
+
+  class Node(var `val`: Int) {
+    var neighbors: ArrayList<Node?> = ArrayList<Node?>()
  }
 
-class CloneGraph {
+
+class Solution {
+    private val visited = HashMap<Node, Node>()   // maps original → cloned
     fun cloneGraph(node: Node?): Node? {
-        if(node == null)
-            return null
-        val visited = mutableMapOf<Node,Node>()
-        return cloneGraphDFS(node,visited)
+        if (node == null) return null
+        return dfs(node)
     }
 
-    //this function will always return cloned node
-    fun cloneGraphDFS(node:Node?,visited:MutableMap<Node,Node>):Node?{
-        if(node == null)
-            return null
-        if(node in visited){
-            return visited[node]!!
+    private fun dfs(original: Node): Node {
+        // If this node is already cloned → return the clone
+        if (visited.containsKey(original)) {
+            return visited[original]!!
         }
-        val newNode = Node(node.`val`)
-        visited.put(node,newNode)
-        for(neighbour in node.neighbors){
-            /* we have to use recursion here - as we cant add neighbour
-            to newnode neighbour . we need to first clone the
-                    neighbour to add
-                    */
 
-            newNode.neighbors.add(cloneGraphDFS(neighbour,visited))
+        // Step 1: Create a clone with the same value
+        val clone = Node(original.`val`)
+
+        // Step 2: Add to visited BEFORE processing neighbors (important)
+        visited[original] = clone
+
+        // Step 3: DFS clone all neighbors
+        for (nei in original.neighbors) {
+            if (nei != null) {
+                clone.neighbors.add(dfs(nei))
+            }
         }
-        return newNode
+
+        return clone
     }
 }

@@ -28,15 +28,15 @@ we can do with bfs as well
 time complexity is o(log n) for balanced tree
 o(n) for unbalanced tree
  */
-class `2_LC104_MaxDepthBinaryTree` {
+class `1_58_LC104_MaxDepthBinaryTree` {
     fun maxDepth(root: TreeNode?): Int {
         var left = 0
         var right = 0
         if(root == null){
             return 0
         }
-        left = maxDepth(root?.left)
-        right = maxDepth(root?.right)
+        left = maxDepth(root.left)
+        right = maxDepth(root.right)
         return 1+ Math.max(left,right)
     }
 }

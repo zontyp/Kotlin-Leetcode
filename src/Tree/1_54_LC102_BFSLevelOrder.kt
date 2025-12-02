@@ -20,7 +20,7 @@ class BFSLevelOrder {
         while(visitedNodes.isNotEmpty()){
             val currLevelNodeList = mutableListOf<TreeNode>()
             val currLevelIntList = mutableListOf<Int>()
-            for(curr in visitedNodes) {
+            for(curr in visitedNodes) { 
                 currLevelNodeList.add(curr)
                 currLevelIntList.add(curr.`val`)
             }

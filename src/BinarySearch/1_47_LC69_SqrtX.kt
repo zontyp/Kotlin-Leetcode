@@ -1,5 +1,7 @@
 package BinarySearch
 /*
+LC 69
+https://leetcode.com/problems/sqrtx/
 idea:
 when m *m < x
 and

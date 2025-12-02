@@ -31,7 +31,7 @@ class Solution {
     private lateinit var inorderIndexMap: Map<Int, Int>
 
     fun buildTree(preorder: IntArray, inorder: IntArray): TreeNode? {
-        preIndex = 0
+          = 0
         inorderIndexMap = inorder.withIndex().associate { (i, v) -> v to i }
         return buildSubtree(preorder, 0, inorder.size - 1)
     }

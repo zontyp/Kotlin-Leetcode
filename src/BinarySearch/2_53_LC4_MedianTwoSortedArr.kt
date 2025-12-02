@@ -1,10 +1,12 @@
 package BinarySearch
 /*
 LC 4
-Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+Given two sorted arrays nums1 and nums2
+of size m and n respectively,
+return the median of the two sorted arrays.
 
 The overall run time complexity should be O(log (m+n)).
-
 idea:
 
 we cannot merge the two arrays
@@ -39,12 +41,18 @@ r = A.size
 
 for m - we form the partitions and check if left partition is valid
  */
-class LC4_MedianTwoSortedArr {
+class `2_53_LC4_MedianTwoSortedArr` {
     fun findMedianSortedArrays(nums1: IntArray, nums2: IntArray): Double {
         val totalSize = nums1.size+nums2.size
         var A = nums1
         var B = nums2
         val leftPartitionSize = (totalSize + 1) / 2
+        /*
+        we binary search on i where i is the
+        number of elements from A in the left partition
+        so time complexity log(A.size)
+        so we select A to be the smaller array
+        */
         if(nums1.size > nums2.size){
             A = nums2
             B = nums1

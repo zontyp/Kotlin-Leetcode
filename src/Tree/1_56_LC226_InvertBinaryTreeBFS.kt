@@ -20,16 +20,16 @@ fun main() {
 class InvertBinaryTreeBFS {
     fun invertTree(root: TreeNode?): TreeNode? {
         //queue of non null nodes
-        val visitedNodes = ArrayDeque<TreeNode?>()
+        val visitedNodes = ArrayDeque<TreeNode>()
         root?.let{visitedNodes.add(it)}
         while(visitedNodes.isNotEmpty()){
             var curr = visitedNodes.removeFirst()
-            curr?.left?.let{visitedNodes.add(it)}
-            curr?.right?.let{visitedNodes.add(it)}
+            curr.left?.let{visitedNodes.add(it)}
+            curr.right?.let{visitedNodes.add(it)}
 
-            var temp = curr?.left
-            curr?.left = curr?.right
-            curr?.right = temp
+            var temp = curr.left
+            curr.left = curr.right
+            curr.right = temp
         }
         return root
     }

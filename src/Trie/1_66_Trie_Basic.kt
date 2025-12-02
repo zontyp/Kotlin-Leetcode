@@ -7,7 +7,7 @@ so rootnode has all possible first alphabets of stored words
 each of these alphabets maps to a node -
 which contains all possible second alphabets after the selected first alphabet
  */
-class Trie_Basic {
+class `1_66_Trie_Basic` {
     private class TrieNode{
         var isWord = false
         val children:MutableMap<Char, TrieNode> = mutableMapOf()

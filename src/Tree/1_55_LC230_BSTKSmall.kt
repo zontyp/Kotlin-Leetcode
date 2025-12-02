@@ -10,7 +10,7 @@ Inorder traversal gives us the k smallest element
 
 we do not want complete inorder traversal to continue
 so we use if(count >=k) check at beginning of dfs
-so dfs is not execures after count exceeds k
+so dfs is not executed after count exceeds k
  */
 fun main() {
     var three:TreeNode? = TreeNode(3)

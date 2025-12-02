@@ -1,5 +1,6 @@
 package Backtracking
 /*
+https://leetcode.com/problems/permutations/description/
 Question
 Given an array nums of distinct integers, return all the possible permutations.
 You can return the answer in any order.
@@ -30,7 +31,7 @@ fun permute(nums: IntArray): List<List<Int>> {
             nums.swap(i,pos)
             dfs(pos+1)
             nums.swap(i,pos)
-        }
+        } 
     }
     dfs(0)
     return result
