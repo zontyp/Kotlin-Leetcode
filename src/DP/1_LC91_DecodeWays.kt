@@ -63,7 +63,7 @@ class DecodeWays {
         if(s.isEmpty() || s[0] == '0') return 0
         //dp[1] gives number of ways for decoding first character of input string
         //dp[2] gives number of ways for decoding first two characters of input string
-        val dp = IntArray(s.length + 1)
+        val dp = IntArray(s.length + 1) // 0 value array
         dp[0] = 1
         dp[1] = 1
         for(i in 2..s.length){
